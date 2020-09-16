@@ -1,7 +1,36 @@
-.carousel-inner img {
+.carousel {
+  max-width: 700px;
+  margin: auto;
+}
+.carousel-item img {
     height: 100%;
     width: 100%;
     
-    max-height: 600px;
-    
   }
+body {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/watercolor.png");
+  
+}
+.jumbotron {
+  border-radius: 25px;
+  margin: 10px;
+  background-color: rgba(228, 175, 228, 0.829);
+  font-family: 'Kufam', cursive;
+}
+.navbar {
+  background-color: rgba(255, 133, 200, 0.603);
+  font-family: 'Press Start 2P', cursive;
+}
+.jumbotron table {
+  font-size: 2rem;
+  background-color: rgb(255, 232, 255)
+}
+.infohead {
+  padding-bottom: 1em;
+}
+.alert {
+  border-radius: 25px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 200%;
+}
