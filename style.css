@@ -40,3 +40,16 @@ body {
 .close-alert:hover {
   color: #999;
 }
+.img-responsive {
+  width: 100%;
+  height: 100%;
+}
+.nesting {
+  border-radius: 25px;
+  background-color: rgba(228, 175, 228, 0.829);
+  padding: 10px;
+}
+.img-responsive {
+  border-radius: 15px;
+  padding: 32px;
+}
