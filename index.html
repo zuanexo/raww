@@ -68,10 +68,10 @@
     <h3>is a domestic species of small carnivorous mammal. They have been known to be exceptionally adorable and funny. A juvenile cat, also known as a kitten, is the cutest known species to humans.</h3>
   </div>
   <div id="closeAlert" class="alert alert-danger">
-    <div class="row">
-      <span class="close-alert col-sm-1 order-sm-2 float-right mr-auto" onclick="document.getElementById('closeAlert').style.display = 'none';">&times;</span>
-      <p class="col-sm-11 order-sm-1"><strong>Did you Know?</strong> Cats can jump 5 times their height!!</p>
-    </div>
+      <div class="row">
+        <span class="close-alert col-sm-1 order-sm-2 " onclick="document.getElementById('closeAlert').style.display = 'none';">&times;</span>
+        <p class="col-sm-11 order-sm-1"><strong>Did you Know?</strong> Cats can jump 5 times their height!!</p>
+      </div>
   </div>
 
   <div class="jumbotron">
@@ -120,6 +120,41 @@
         </tr>
       </tbody>
     </table>
+    <h1>
+      Add more cats through this form ^x^
+    </h1>
+    <div>
+      <form id="tform" >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" placeholder="Your cat's name" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender" class="form-control" placeholder="Your cat's name">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" required>
+        </div>
+        <div class="form-group">
+          <label for="coat">Coat</label>
+          <input type="text" class="form-control" placeholder="Your cat's coat" id="coat" required>
+        </div>
+        <div class="form-group">
+          <label for="favact">Favourite Activities</label>
+          <input type="text" class="form-control" placeholder="Your cat's hobbies" id="favact" required>
+        </div>
+        <input type="reset" class="btn btn-secondary" value="Reset">
+        <input type="submit" id="fsubmit" class="btn btn-primary" value="Submit">
+
+          
+           
+      </form>
+    </div>
     
   </div>
   <div class="jumbotron nesting">
@@ -158,6 +193,19 @@
         });
       });
       </script>
+    <script>
+      document.getElementById("fsubmit").addEventListener("click", function(event){
+        event.preventDefault();
+        var n0 = document.forms["tform"].elements[0].value;
+        var n1 = document.forms["tform"].elements[1].value;
+        var n2 = document.forms["tform"].elements[2].value;
+        var n3 = document.forms["tform"].elements[3].value;
+        var n4 = document.forms["tform"].elements[4].value;
+        var tb = document.getElementById("myTable");
+        var tr = document.createElement("tr")
+        tb.appendChild(tr);
+});
+    </script>
 
   </body>
 </html>

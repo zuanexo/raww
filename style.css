@@ -35,10 +35,12 @@ body {
 }
 .close-alert {
   font-size: 2em;
-  margin-top: -0.5em;
+  
+  text-align: right;
+  line-height: 0.5em;
 }
 .close-alert:hover {
-  color: #999;
+  color: #989;
 }
 .img-responsive {
   width: 100%;
