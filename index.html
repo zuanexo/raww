@@ -137,7 +137,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="age">Age</label>
+          <label for="age">Age (In Years)</label>
           <input type="number" class="form-control" id="age" required>
         </div>
         <div class="form-group">
@@ -194,17 +194,26 @@
       });
       </script>
     <script>
-      document.getElementById("fsubmit").addEventListener("click", function(event){
+      document.getElementById("tform").addEventListener("submit", formSubmit);
+      function formSubmit(event) {
+        console.log("help")
         event.preventDefault();
-        var n0 = document.forms["tform"].elements[0].value;
-        var n1 = document.forms["tform"].elements[1].value;
-        var n2 = document.forms["tform"].elements[2].value;
-        var n3 = document.forms["tform"].elements[3].value;
-        var n4 = document.forms["tform"].elements[4].value;
         var tb = document.getElementById("myTable");
-        var tr = document.createElement("tr")
-        tb.appendChild(tr);
-});
+        var tr = document.createElement("tr")            
+        var i;
+        for (i = 0; i < document.forms["tform"].elements.length -2; i++) {
+          var ni = document.forms["tform"].elements[i].value;
+          var td = document.createElement("td");
+          if(i==2) {
+            ni +=" Years"
+          }
+          td.innerHTML = ni;
+          tr.appendChild(td);
+          console.log(ni);
+        }
+        tb.appendChild(tr); 
+        return false;
+      }  
     </script>
 
   </body>
